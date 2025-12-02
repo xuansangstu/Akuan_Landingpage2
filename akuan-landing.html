@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Miến Chua Cay A Khoan - Ngon Nhức Nách</title>
+    <meta name="description" content="Miến chua cay Akuan chuẩn vị Tứ Xuyên, cứu đói đêm khuya chỉ trong 5 phút. Săn deal hời ngay!">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Be Vietnam Pro', 'sans-serif'],
+              display: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                red: '#D90429',       // Spicy Red
+                darkRed: '#8D0000',   // Darker shade for hover
+                yellow: '#FFB703',    // Mustard Yellow
+                white: '#FAFAFA',     // Clean White Background
+                black: '#111111'
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 2s infinite',
+            },
+            screens: {
+                'xs': '430px', // Custom breakpoint for larger phones
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Global Reset for Images */
+      img, video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Base Font Size for Mobile Readability */
+      html {
+        font-size: 16px; /* Default base 16px */
+      }
+      
+      /* Custom Scrollbar Hide */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Selection Color */
+      ::selection {
+        background-color: #FFB703;
+        color: #111111;
+      }
+
+      /* Error Input Style */
+      .input-error {
+        border-color: #EF4444 !important; /* Red-500 */
+        background-color: #FEF2F2 !important; /* Red-50 */
+        animation: shake 0.3s ease-in-out;
+      }
+
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+      }
+    </style>
+</head>
+<body class="bg-brand-white text-gray-900 font-sans antialiased relative">
+
+    <!-- HERO SECTION -->
+    <section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden bg-brand-black">
+        <!-- Background Image -->
+        <!-- THAY ẢNH BÌA Ở ĐÂY -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center md:bg-fixed" style="background-image: url('LINK_ANH_BIA_O_DAY');">
+            <div class="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/70 via-black/20 to-brand-black"></div>
+        </div>
+      
+        <!-- Content -->
+        <div class="relative z-20 text-center px-4 w-full max-w-5xl mx-auto flex flex-col items-center pt-10">
+            <!-- Badge -->
+            <div class="animate-bounce-slow mb-6">
+                <span class="bg-brand-yellow text-brand-black font-black uppercase tracking-wider text-xs md:text-sm px-4 py-2 rounded-full shadow-[0_0_20px_rgba(255,183,3,0.6)]">
+                    🔥 Best Seller TikTok Shop
+                </span>
+            </div>
+            
+            <!-- H1: Adjusted text size for mobile to prevent overflow -->
+            <h1 class="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.2] md:leading-[1.1] mb-6 drop-shadow-2xl break-words w-full">
+                Cứu Đói <span class="text-brand-yellow">Đêm Khuya</span><br class="hidden sm:block"/>
+                Miến Chua Cay <span class="text-brand-red inline-block bg-white px-2 transform -skew-x-6 text-brand-black mt-2 sm:mt-0">A Khoan</span>
+            </h1>
+            
+            <!-- Subheadline: Min 16px -->
+            <p class="font-sans text-gray-100 text-base sm:text-lg md:text-2xl mb-10 font-medium max-w-2xl leading-relaxed drop-shadow-md px-2">
+                Sợi miến dai sần sật, vị chua cay tê tái, không chiên qua dầu. <br class="hidden sm:block">Chỉ 5 phút là có ăn ngay!
+            </p>
+            
+            <!-- CTA Button: Full width on mobile -->
+            <button onclick="scrollToOffers()" class="group relative w-full sm:w-auto bg-brand-red hover:bg-brand-darkRed text-white font-bold py-4 px-8 md:px-12 rounded-xl sm:rounded-full text-lg md:text-2xl shadow-[0_10px_30px_rgba(217,4,41,0.5)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                Săn Deal Hời Ngay 🔥
+            </button>
+
+            <!-- Mini Trust Indicators -->
+            <div class="mt-12 flex flex-wrap justify-center gap-3 sm:gap-8 text-white/90 text-sm font-semibold">
+                <div class="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-md border border-white/20 whitespace-nowrap">
+                    ⚡️ 5 Phút
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-md border border-white/20 whitespace-nowrap">
+                    🍜 Chuẩn Vị Tứ Xuyên
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-md border border-white/20 whitespace-nowrap">
+                    🍠 Miến Khoai Lang
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS SECTION -->
+    <section class="py-16 bg-brand-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- AGITATION -->
+            <div class="text-center mb-12">
+                <h2 class="font-display font-black text-2xl sm:text-3xl md:text-5xl mb-8 text-gray-900 leading-tight">
+                    Bạn Đang Gặp Vấn Đề? 😫
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Pain 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-gray-200 hover:border-brand-red transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="bg-red-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-red">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Đói lúc nửa đêm?</h3>
+                        <p class="text-gray-600 text-base">Bụng réo ầm ĩ nhưng ngại nấu nướng lỉnh kỉnh, chờ ship thì quá lâu.</p>
+                    </div>
+                    
+                    <!-- Pain 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-gray-200 hover:border-brand-red transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="bg-red-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-red">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Chán Mì Tôm?</h3>
+                        <p class="text-gray-600 text-base">Ăn mì gói mãi thì nóng, ngán tận cổ, mà lại chẳng có chất dinh dưỡng.</p>
+                    </div>
+
+                    <!-- Pain 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-gray-200 hover:border-brand-red transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="bg-red-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-red">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Sợ Béo & Mụn?</h3>
+                        <p class="text-gray-600 text-base">Đồ ăn đêm thường nhiều dầu mỡ, chiên đi chiên lại không tốt cho sức khỏe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOLUTION -->
+            <div class="bg-gray-900 rounded-3xl p-6 md:p-16 text-white text-center relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="font-display font-black text-2xl sm:text-3xl md:text-5xl mb-4 text-brand-yellow">
+                        GIẢI PHÁP TỪ AKUAN 🍜
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12">Nhanh - Gọn - Ngon hơn đi quán!</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                        <div class="flex flex-row sm:flex-col items-center justify-start sm:justify-center gap-4 sm:gap-0 bg-white/5 p-4 rounded-xl sm:bg-transparent sm:p-0">
+                            <div class="text-4xl sm:text-5xl sm:mb-4">🍠</div>
+                            <div class="text-left sm:text-center">
+                                <h4 class="font-bold text-lg text-brand-yellow">Không Chiên</h4>
+                                <p class="text-gray-300 font-medium text-sm sm:text-base">Sợi miến khoai lang healthy</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row sm:flex-col items-center justify-start sm:justify-center gap-4 sm:gap-0 bg-white/5 p-4 rounded-xl sm:bg-transparent sm:p-0">
+                            <div class="text-4xl sm:text-5xl sm:mb-4">⚡</div>
+                            <div class="text-left sm:text-center">
+                                <h4 class="font-bold text-lg text-brand-yellow">5 Phút</h4>
+                                <p class="text-gray-300 font-medium text-sm sm:text-base">Chế nước sôi ăn liền</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row sm:flex-col items-center justify-start sm:justify-center gap-4 sm:gap-0 bg-white/5 p-4 rounded-xl sm:bg-transparent sm:p-0">
+                            <div class="text-4xl sm:text-5xl sm:mb-4">🌶️</div>
+                            <div class="text-left sm:text-center">
+                                <h4 class="font-bold text-lg text-brand-yellow">Vị Tứ Xuyên</h4>
+                                <p class="text-gray-300 font-medium text-sm sm:text-base">Cay tê chuẩn bản gốc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CTA 1 -->
+    <div class="w-full flex justify-center py-6 bg-brand-white px-4">
+        <button onclick="scrollToOffers()" class="w-full sm:w-auto flex flex-col items-center group">
+            <span class="w-full sm:w-auto text-center bg-brand-red text-white font-bold py-3 px-8 rounded-xl sm:rounded-full shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:bg-brand-darkRed flex items-center justify-center gap-2">
+                XEM CÁC COMBO ƯU ĐÃI 🔥
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400 mt-2 animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+    </div>
+
+    <!-- PRODUCT SHOWCASE -->
+    <section class="py-16 bg-white text-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-display font-black text-2xl sm:text-3xl md:text-5xl mb-4 uppercase text-brand-black">
+                    Siêu Phẩm <span class="text-brand-red">Nhà A Khoan</span>
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+                    Hương vị Tứ Xuyên đích thực chinh phục mọi tín đồ ăn cay
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <!-- Product 1 -->
+                <div class="group relative rounded-3xl overflow-hidden shadow-2xl bg-gray-50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-500">
+                    <div class="relative h-64 md:h-96 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                            🔥 Bán chạy số 1
+                        </div>
+                        <!-- THAY ẢNH MIẾN TRÙNG KHÁNH -->
+                        <img src="LINK_ANH_MIEN_TRUNG_KHANH" alt="Miến Chua Cay" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8">
+                            <h3 class="font-display font-bold text-xl md:text-3xl text-white mb-2 md:mb-3">Miến Chua Cay Trùng Khánh</h3>
+                            <div class="w-16 h-1 bg-brand-red mb-2 md:mb-4 rounded-full"></div>
+                        </div>
+                    </div>
+                    <!-- Reduced padding for mobile -->
+                    <div class="p-5 md:p-8 pt-2">
+                        <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                            Best Seller! Sợi miến làm từ tinh bột khoai lang hồng dai sần sật. Nước súp chua cay đậm đà kích thích vị giác cực mạnh.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group relative rounded-3xl overflow-hidden shadow-2xl bg-gray-50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-500">
+                    <div class="relative h-64 md:h-96 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                            ⭐ Mới ra mắt
+                        </div>
+                        <!-- THAY ẢNH MỲ LY GÀ -->
+                        <img src="LINK_ANH_MY_LY_GA" alt="Mỳ Ly Gà Cay" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 md:p-8">
+                            <h3 class="font-display font-bold text-xl md:text-3xl text-white mb-2 md:mb-3">Mỳ Ly Gà Cay Khoai Tây</h3>
+                            <div class="w-16 h-1 bg-brand-red mb-2 md:mb-4 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="p-5 md:p-8 pt-2">
+                        <p class="text-gray-600 leading-relaxed text-base md:text-lg">
+                            Tiện lợi đỉnh cao. Sốt gà hầm đậm vị kết hợp cùng khoai tây nghiền bùi béo. Đảm bảo ăn là dính!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CTA 2 -->
+    <div class="w-full flex justify-center py-6 bg-brand-white px-4">
+        <button onclick="scrollToOffers()" class="w-full sm:w-auto flex flex-col items-center group">
+            <span class="w-full sm:w-auto text-center bg-brand-red text-white font-bold py-3 px-8 rounded-xl sm:rounded-full shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:bg-brand-darkRed flex items-center justify-center gap-2">
+                CHỌN MÓN NGAY 🍜
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400 mt-2 animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+    </div>
+
+    <!-- OFFERS SECTION -->
+    <section id="offers" class="py-16 md:py-24 bg-white relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-display font-black text-3xl md:text-6xl text-brand-red mb-4 uppercase">
+                    Săn Deal Hời 🔥
+                </h2>
+                <p class="text-gray-600 text-lg font-medium">
+                    Ưu đãi độc quyền chỉ có trên Landing Page
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto items-end">
+                
+                <!-- Combo 1: Newbie -->
+                <div class="flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-xl z-10 hover:border-brand-yellow transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-48 overflow-hidden">
+                        <!-- THAY ẢNH COMBO 1 -->
+                        <img src="LINK_ANH_COMBO_1" alt="Combo Ăn Thử" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-brand-yellow text-brand-black font-bold px-3 py-1 rounded-lg text-sm shadow-sm">-45%</div>
+                        <div class="absolute bottom-4 left-4 bg-gray-900/80 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Newbie Choice</div>
+                    </div>
+                    <!-- Optimized padding: p-5 on mobile -->
+                    <div class="p-5 md:p-8 flex-1 flex flex-col">
+                        <h3 class="font-display font-bold text-2xl mb-2 text-gray-900">Combo Ăn Thử</h3>
+                        <p class="text-gray-500 text-base mb-6 min-h-[auto] md:min-h-[40px]">Dành cho người mới bắt đầu (Newbie Choice).</p>
+                        <ul class="space-y-3 mb-6 bg-gray-50 p-4 rounded-xl">
+                            <li class="flex items-start gap-3 text-base text-gray-700 font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                                2x Mỳ Ly Gà Cay Khoai Tây
+                            </li>
+                        </ul>
+                        <div class="mt-auto pt-6 border-t border-gray-100">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-400 text-lg line-through font-medium">108.000đ</span>
+                                <span class="text-3xl font-black text-brand-red">59.000đ</span>
+                            </div>
+                            <button onclick="openOrderModal('Combo Ăn Thử', '59.000đ')" class="w-full py-4 rounded-xl font-bold text-lg uppercase tracking-wide flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 bg-brand-yellow text-brand-black hover:bg-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                                Thêm Vào Giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 2: Best Seller -->
+                <div class="flex flex-col bg-white rounded-3xl overflow-hidden border-4 border-brand-red shadow-[0_20px_50px_rgba(217,4,41,0.15)] transform md:-translate-y-4 relative z-20 transition-all duration-300 hover:scale-105">
+                    <div class="bg-brand-red text-white text-center py-3 font-black text-sm uppercase tracking-widest flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.115.385-2.256 1-3.24A8.88 8.88 0 0 1 8.5 14.5Z"/></svg>
+                        Most Popular 🔥
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.115.385-2.256 1-3.24A8.88 8.88 0 0 1 8.5 14.5Z"/></svg>
+                    </div>
+                    <div class="relative h-48 overflow-hidden">
+                        <!-- THAY ẢNH COMBO 2 -->
+                        <img src="LINK_ANH_COMBO_2" alt="Combo Trùm Cuối" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-brand-yellow text-brand-black font-bold px-3 py-1 rounded-lg text-sm shadow-sm">-53%</div>
+                    </div>
+                    <!-- Optimized padding -->
+                    <div class="p-5 md:p-8 flex-1 flex flex-col">
+                        <h3 class="font-display font-bold text-2xl mb-2 text-gray-900">Combo Trùm Cuối</h3>
+                        <p class="text-gray-500 text-base mb-6 min-h-[auto] md:min-h-[40px]">Best Seller! Tích trữ ăn dần siêu hời.</p>
+                        <ul class="space-y-3 mb-6 bg-gray-50 p-4 rounded-xl">
+                            <li class="flex items-start gap-3 text-base text-gray-700 font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                                5x Gói Miến Chua Cay
+                            </li>
+                            <li class="flex items-start gap-3 text-base text-gray-700 font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                                1x Mỳ Ly Gà Cay
+                            </li>
+                        </ul>
+                        <div class="mt-auto pt-6 border-t border-gray-100">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-400 text-lg line-through font-medium">285.000đ</span>
+                                <span class="text-3xl font-black text-brand-red">132.000đ</span>
+                            </div>
+                            <button onclick="openOrderModal('Combo Trùm Cuối', '132.000đ')" class="w-full py-4 rounded-xl font-bold text-lg uppercase tracking-wide flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 bg-brand-red text-white hover:bg-brand-darkRed shadow-red-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                                Mua Ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 3: Mix -->
+                <div class="flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-xl z-10 hover:border-brand-yellow transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-48 overflow-hidden">
+                        <!-- THAY ẢNH COMBO 3 -->
+                        <img src="LINK_ANH_COMBO_3" alt="Combo Đổi Vị" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-brand-yellow text-brand-black font-bold px-3 py-1 rounded-lg text-sm shadow-sm">-50%</div>
+                         <div class="absolute bottom-4 left-4 bg-gray-900/80 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Must Try</div>
+                    </div>
+                    <!-- Optimized padding -->
+                    <div class="p-5 md:p-8 flex-1 flex flex-col">
+                        <h3 class="font-display font-bold text-2xl mb-2 text-gray-900">Combo Đổi Vị</h3>
+                        <p class="text-gray-500 text-base mb-6 min-h-[auto] md:min-h-[40px]">Team thích ăn khô trộn đậm đà.</p>
+                        <ul class="space-y-3 mb-6 bg-gray-50 p-4 rounded-xl">
+                            <li class="flex items-start gap-3 text-base text-gray-700 font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                                4x Phở Trộn Tê Cay
+                            </li>
+                             <li class="flex items-start gap-3 text-base text-gray-700 font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red mt-0.5 shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                                1x Mỳ Ly Gà Cay
+                            </li>
+                        </ul>
+                        <div class="mt-auto pt-6 border-t border-gray-100">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-400 text-lg line-through font-medium">250.000đ</span>
+                                <span class="text-3xl font-black text-brand-red">118.000đ</span>
+                            </div>
+                            <button onclick="openOrderModal('Combo Đổi Vị', '118.000đ')" class="w-full py-4 rounded-xl font-bold text-lg uppercase tracking-wide flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 bg-brand-yellow text-brand-black hover:bg-yellow-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                                Thêm Vào Giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CTA 3 -->
+    <div class="w-full flex justify-center py-6 bg-brand-white px-4">
+        <button onclick="scrollToOffers()" class="w-full sm:w-auto flex flex-col items-center group">
+            <span class="w-full sm:w-auto text-center bg-brand-red text-white font-bold py-3 px-8 rounded-xl sm:rounded-full shadow-lg transform transition-transform duration-300 group-hover:scale-105 group-hover:bg-brand-darkRed flex items-center justify-center gap-2">
+                ĐỌC REVIEW XONG MUA LUÔN 😎
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-gray-400 mt-2 animate-bounce"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+    </div>
+
+    <!-- SOCIAL PROOF -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="font-display font-black text-2xl sm:text-4xl text-center mb-8 text-gray-900">
+                Khách Hàng Nói Gì? 💬
+            </h2>
+
+            <div class="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 pb-8 md:pb-0 px-2 md:px-0 no-scrollbar snap-x snap-mandatory">
+                <!-- Review 1 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="Thảo Nhi" class="w-12 h-12 rounded-full object-cover ring-2 ring-brand-yellow/30">
+                        <div>
+                            <div class="font-bold text-gray-900">Thảo Nhi</div>
+                            <div class="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full w-fit">Đã mua trên TikTok</div>
+                        </div>
+                    </div>
+                    <div class="flex text-brand-yellow mb-3">★★★★★</div>
+                    <p class="text-gray-700 italic leading-relaxed text-base">"Vị cay tê lưỡi, sợi miến dai không bị nát. 10 điểm! Ăn đêm siêu dính luôn á."</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Minh Tuấn" class="w-12 h-12 rounded-full object-cover ring-2 ring-brand-yellow/30">
+                        <div>
+                            <div class="font-bold text-gray-900">Minh Tuấn</div>
+                            <div class="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full w-fit">Đã mua trên Facebook</div>
+                        </div>
+                    </div>
+                    <div class="flex text-brand-yellow mb-3">★★★★★</div>
+                    <p class="text-gray-700 italic leading-relaxed text-base">"Cứu cánh cho mấy đêm chạy deadline. Nước súp đỉnh cao, chua chua cay cay tỉnh cả ngủ."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="min-w-[85vw] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://i.pravatar.cc/150?u=a04258114e29026302d" alt="Lan Anh" class="w-12 h-12 rounded-full object-cover ring-2 ring-brand-yellow/30">
+                        <div>
+                            <div class="font-bold text-gray-900">Lan Anh</div>
+                            <div class="text-xs font-semibold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full w-fit">Đã mua trên Shopee</div>
+                        </div>
+                    </div>
+                    <div class="flex text-brand-yellow mb-3">★★★★★</div>
+                    <p class="text-gray-700 italic leading-relaxed text-base">"Giao hàng siêu nhanh, đóng gói kỹ. Mua combo hời hơn hẳn mua lẻ nha mn."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="font-display font-bold text-2xl sm:text-3xl text-center mb-8 text-gray-900">
+                Thắc Mắc Thường Gặp 🧐
+            </h2>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg p-5 hover:border-brand-red transition-colors bg-gray-50">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red shrink-0"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                        Cay quá không shop ơi?
+                    </h3>
+                    <p class="text-gray-600 pl-7 text-base">Yên tâm nha! Có gói gia vị ớt riêng, bạn tự điều chỉnh độ cay tùy thích. Không ăn cay được thì cho ít thui nè.</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-5 hover:border-brand-red transition-colors bg-gray-50">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red shrink-0"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                        Hạn sử dụng thế nào?
+                    </h3>
+                    <p class="text-gray-600 pl-7 text-base">Hàng mới sản xuất liên tục, date xa 10-12 tháng. Thoải mái mua tích trữ nha.</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-5 hover:border-brand-red transition-colors bg-gray-50">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-red shrink-0"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                        Ship hàng có nhanh không?
+                    </h3>
+                    <p class="text-gray-600 pl-7 text-base">Shop đóng gói và giao cho đơn vị vận chuyển trong ngày. Nội thành 1-2 ngày, ngoại tỉnh 2-3 ngày là có ăn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-24 md:pb-12">
+        <div class="container mx-auto px-4">
+            <!-- Trust Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 border-b border-gray-100 pb-12">
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900">Chính Hãng 100%</h4>
+                    <p class="text-xs text-gray-500">Hoàn tiền nếu phát hiện giả</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"/><path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"/><circle cx="7" cy="18" r="2"/><path d="M15 18H9"/><circle cx="17" cy="18" r="2"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900">Giao Hàng Nhanh</h4>
+                    <p class="text-xs text-gray-500">1-3 ngày toàn quốc</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900">Đổi Trả 7 Ngày</h4>
+                    <p class="text-xs text-gray-500">Nếu có lỗi nhà sản xuất</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-900">Hỗ Trợ 24/7</h4>
+                    <p class="text-xs text-gray-500">Hotline: 0866 988 783</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-center md:text-left">
+                <div class="w-full md:w-auto flex flex-col items-center md:items-start">
+                    <h3 class="font-display font-black text-2xl text-brand-red tracking-tighter">AKUAN VIETNAM</h3>
+                    <p class="text-gray-500 text-sm mt-2">Hương vị Tứ Xuyên chính gốc.</p>
+                </div>
+
+                <div class="w-full md:w-auto text-gray-600 text-sm flex flex-col items-center md:items-end gap-1">
+                    <p class="font-bold mb-1">CÔNG TY TNHH THỰC PHẨM AKUAN VIỆT NAM</p>
+                    <p>Hotline: 0866 988 783</p>
+                    <p>Email: runningwhale.vnstore@gmail.com</p>
+                    <p>Website: https://ladipage.vn</p>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-100 text-center text-xs text-gray-400">
+                © 2024 Akuan Vietnam. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA (Mobile Only) -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 z-50 md:hidden shadow-[0_-5px_15px_rgba(0,0,0,0.1)] transition-transform duration-300 translate-y-full">
+        <button onclick="scrollToOffers()" class="w-full bg-brand-red text-white font-bold py-3 px-6 rounded-xl flex items-center justify-center gap-2 animate-pulse-fast shadow-lg active:bg-brand-darkRed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            MUA NGAY - GIẢM 50% 🔥
+        </button>
+    </div>
+
+    <!-- ORDER MODAL (POPUP) -->
+    <div id="order-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeOrderModal()"></div>
+        
+        <!-- Form Container -->
+        <div class="bg-white w-full max-w-md mx-4 rounded-3xl shadow-2xl relative z-10 overflow-hidden transform transition-all max-h-[90vh] overflow-y-auto">
+            <!-- Header -->
+            <div class="bg-brand-red p-6 text-white text-center">
+                <h3 class="font-display font-bold text-2xl">Xác Nhận Đơn Hàng 🚀</h3>
+                <p class="text-white/80 text-sm mt-1">Điền thông tin để chúng mình ship liền tay nha!</p>
+                <button onclick="closeOrderModal()" class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 18 18"/></svg>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="order-form" onsubmit="submitOrder(event)" class="p-6 space-y-4">
+                <!-- Selected Item Summary -->
+                <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-200 flex justify-between items-center mb-4">
+                    <div>
+                        <span class="text-xs text-gray-500 font-bold uppercase block">Bạn đã chọn:</span>
+                        <span id="modal-combo-name" class="font-bold text-gray-900 text-lg">Combo ...</span>
+                    </div>
+                    <span id="modal-price" class="font-black text-brand-red text-xl">0đ</span>
+                </div>
+
+                <!-- Inputs -->
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Họ tên của bạn *</label>
+                        <input type="text" id="customer-name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all" placeholder="Ví dụ: Nguyễn Văn A">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
+                        <!-- oninput prevents non-digits from being typed -->
+                        <input type="tel" id="customer-phone" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all" placeholder="Ví dụ: 0912345678">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Địa chỉ nhận hàng *</label>
+                        <textarea id="customer-address" rows="2" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition-all" placeholder="Ví dụ: Số 10, Ngõ 1, Quận Thanh Xuân..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Error Message Placeholder -->
+                <div id="form-error" class="text-brand-red text-sm font-bold text-center hidden bg-red-50 p-2 rounded-lg border border-red-200">
+                    Vui lòng điền đầy đủ thông tin!
+                </div>
+
+                <!-- Hidden Input for Logic -->
+                <input type="hidden" id="input-combo-name">
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-brand-red text-white font-bold py-4 rounded-xl shadow-lg hover:bg-brand-darkRed transition-all mt-2 flex justify-center items-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed">
+                    <span id="btn-text">HOÀN TẤT ĐẶT HÀNG</span>
+                    <svg id="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // ==========================================
+        // CẤU HÌNH
+        // ==========================================
+        const WEBHOOK_URL = "https://hook.eu1.make.com/dtrvhkwwehxxd6gntvcw663nanmyafam";
+
+        // ==========================================
+        // UI INTERACTION
+        // ==========================================
+        function scrollToOffers() {
+            const element = document.getElementById('offers');
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        const stickyCTA = document.getElementById('sticky-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                stickyCTA.classList.remove('translate-y-full');
+            } else {
+                stickyCTA.classList.add('translate-y-full');
+            }
+        });
+
+        // ==========================================
+        // ORDER LOGIC
+        // ==========================================
+        const modal = document.getElementById('order-modal');
+        const comboNameEl = document.getElementById('modal-combo-name');
+        const priceEl = document.getElementById('modal-price');
+        const inputComboEl = document.getElementById('input-combo-name');
+        const errorEl = document.getElementById('form-error');
+
+        function openOrderModal(name, price) {
+            comboNameEl.innerText = name;
+            priceEl.innerText = price;
+            inputComboEl.value = name;
+            modal.classList.remove('hidden');
+            
+            // Reset form state
+            document.getElementById('order-form').reset();
+            errorEl.classList.add('hidden');
+            const inputs = document.querySelectorAll('#order-form input, #order-form textarea');
+            inputs.forEach(input => input.classList.remove('input-error'));
+        }
+
+        function closeOrderModal() {
+            modal.classList.add('hidden');
+        }
+
+        async function submitOrder(event) {
+            event.preventDefault();
+            
+            const btn = event.target.querySelector('button[type="submit"]');
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            
+            const nameInput = document.getElementById('customer-name');
+            const phoneInput = document.getElementById('customer-phone');
+            const addressInput = document.getElementById('customer-address');
+            
+            // 1. Validation Logic
+            let isValid = true;
+            let errorMessage = "";
+            
+            // Reset styles
+            errorEl.classList.add('hidden');
+            [nameInput, phoneInput, addressInput].forEach(el => el.classList.remove('input-error'));
+
+            // Check Empty fields
+            if (!nameInput.value.trim()) {
+                isValid = false;
+                nameInput.classList.add('input-error');
+            }
+            if (!addressInput.value.trim()) {
+                isValid = false;
+                addressInput.classList.add('input-error');
+            }
+
+            // Strict Phone Check
+            const phoneVal = phoneInput.value.trim();
+            if (!phoneVal) {
+                isValid = false;
+                phoneInput.classList.add('input-error');
+            } else if (phoneVal.length !== 10 || !phoneVal.startsWith('0')) {
+                isValid = false;
+                phoneInput.classList.add('input-error');
+                errorMessage = "Số điện thoại không hợp lệ (cần 10 số, bắt đầu bằng 0)";
+            }
+
+            if (!isValid) {
+                errorEl.innerText = errorMessage || "Vui lòng điền đầy đủ các ô màu đỏ!";
+                errorEl.classList.remove('hidden');
+                // Shake animation trigger (via class re-add)
+                errorEl.classList.remove('animate-pulse');
+                void errorEl.offsetWidth; // trigger reflow
+                errorEl.classList.add('animate-pulse');
+                return; // Stop execution
+            }
+
+            // 2. Loading State
+            btnText.innerText = 'ĐANG XỬ LÝ...';
+            btnIcon.style.display = 'none';
+            btn.disabled = true;
+
+            const formData = {
+                "Thời Gian": new Date().toLocaleString('vi-VN'),
+                "Họ Tên": nameInput.value.trim(),
+                "Số Điện Thoại": phoneInput.value.trim(),
+                "Địa Chỉ": addressInput.value.trim(),
+                "Combo": inputComboEl.value,
+                "Tổng Tiền": priceEl.innerText
+            };
+
+            try {
+                // 3. Send to Make Webhook
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    // 4. Success Action
+                    alert(`Đặt hàng thành công! Cảm ơn bạn ${formData["Họ Tên"]}. Shop sẽ gọi lại xác nhận ngay.`);
+                    closeOrderModal();
+                    window.location.reload();
+                } else {
+                    throw new Error('Server returned error');
+                }
+
+            } catch (error) {
+                console.error("Lỗi:", error);
+                alert("Có lỗi kết nối. Vui lòng thử lại!");
+                
+                // Reset Button
+                btnText.innerText = 'HOÀN TẤT ĐẶT HÀNG';
+                btnIcon.style.display = 'block';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
